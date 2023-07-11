@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flickr_gallery_API</title>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="script/flickr.js"></script>
 </head>
 <body>
 
     <main>
+        <section id="searchBox">
+            <input type="text" id="search" placeholder="검색어를 입력하세요">
+            <button class="btnSearch">SEARCH</button>
+        </section>
         <section id="wrap">
+            <img src="img/6.gif" class="loading" alt="로딩중입니다">
             <ul id="list">
                 <!-- <li class="item">
                     <div>
