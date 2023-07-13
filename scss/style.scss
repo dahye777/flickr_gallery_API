@@ -1,17 +1,30 @@
-@charset "utf-8";
-*{margin: 0px; padding: 0px; box-sizing: border-box;}
-ul,ol,li{list-style: none;}
-a{text-decoration: none;}
+@charset "UTF-8";
 
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
     background-color: #eee;
 
-    #searchBox{
+    #searchBox {
         width: 100%;
         padding: 50px 60px 0;
         font-size: 0;
 
-        #search{
+        #search {
             width: 300px;
             height: 30px;
             background-color: #fff;
@@ -19,7 +32,7 @@ body{
             padding-left: 10px;
         }
 
-        .btnSearch{
+        .btnSearch {
             width: 80px;
             height: 30px;
             background-color: #333;
@@ -34,12 +47,12 @@ body{
         }
     }
 
-    #wrap{
+    #wrap {
         width: 100%;
         padding: 50px;
         overflow: hidden;
 
-        .loading{
+        .loading {
             width: 100px;
             position: absolute;
             top: 50%;
@@ -48,56 +61,79 @@ body{
             transition: 1s;
             opacity: 1;
 
-            &.off{
+            &.off {
                 opacity: 0;
             }
         }
 
-        #list{
+        #list {
             opacity: 0;
             transform: translateY(100px);
             transition: 1s;
 
-            &.on{
+            &.on {
                 opacity: 1;
                 transform: translateY(0px);
             }
 
-            &::after{
+            &::after {
                 content: '';
                 display: block;
                 clear: both;
             }
 
-            li{
+            li {
                 width: calc(100% / 6);
                 float: left;
                 padding: 10px;
-                // li사이의 간격을 준 것
+                // margin: 10px;
 
-                div{
+                // li사이의 간격을 준것
+                div {
                     width: 100%;
                     background-color: #fff;
                     padding: 20px;
                     border-radius: 5px;
                     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 
-                    a{
-
-                        img{
+                    a {
+                        img {
                             width: 100%;
                         }
                     }
 
-                    p{
+                    p {
                         font: 12px/1.2 "arial";
                         color: #333;
                         margin-top: 10px;
                         margin-bottom: 10px;
                     }
-
                 }
             }
+        }
+    }
+
+    aside {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 100%;
+        }
+
+        span {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            cursor: pointer;
         }
     }
 }
